@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'jquery-rails'
+gem 'bootstrap-sass-rails'
 
 group :development do
   gem 'sqlite3'
