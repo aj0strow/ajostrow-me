@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails'
+gem 'omniauth-facebook'
 gem 'jquery-rails'
 gem 'bootstrap-sass-rails'
 
