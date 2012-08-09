@@ -1,0 +1,16 @@
+$siteWidth: 780px;
+$sitePadding: 10px;
+
+@mixin space-children($spacing) {
+  margin-left: $spacing;
+  &:first-of-type { 
+    margin-left: 0 
+  }
+}
+
+@mixin border-radius($thickness) {
+  border-radius: $thickness;
+  -moz-border-radius: $thickness;
+  -webkit-border-radius: $thickness;
+  -o-border-radius: $thickness;
+}

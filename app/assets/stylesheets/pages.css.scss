@@ -1,3 +1,61 @@
-// Place all the styles related to the pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "framework";
+
+/* Contact */
+
+$socialSpacing: 50px;
+$socialSize: 150px;
+
+ul.social-group {
+  
+  list-style: none;
+  display: inline-block;
+  margin-bottom: $socialSpacing;
+  margin-left: 70px;
+  
+  li {
+    float: left;
+    @include space-children($socialSpacing);
+  }
+}
+
+.social {
+  width: $socialSize; 
+  height: $socialSize;
+  @include border-radius(12px);
+  border: 10px solid;
+  opacity: 0.75;
+  &:hover {
+    opacity: 1;
+    background-color: #fff;
+  }
+  img {
+    width: 145px;
+    height: 145px;
+    margin: auto;
+  }
+}
+
+#stackoverflow {
+  border-color: #f47a20;
+  /* alt: #f68a1f, #d28a29, #c09452, #a68a6e, #818185 */
+}
+
+#github {
+  border-color: #2e3436;
+}
+
+#linkedin {
+  border-color: #137eb1;
+}
+
+#facebook {
+  border-color: #2e3f73;
+}
+
+#twitter {
+  border-color: #33ccff;
+}
+
+#googleplus {
+  border-color: #cf4332;
+}

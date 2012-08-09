@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
   
-  def home
-    @info = ENV['FACEBOOK_SECRET']
+  def about
+  end
+  
+  
+  def contact
+    @urls = SOCIAL_URLS
   end
   
 end

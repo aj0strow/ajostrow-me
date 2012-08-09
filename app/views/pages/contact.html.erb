@@ -1,0 +1,44 @@
+<div class="row">
+	<p>
+		Feel free to get a hold of me. I check messages frequently on any of the sites below. 
+		However I do ask that if you have questions about specific problems or you need help, 
+		please exhaust every other resource online before you bother me, thanks!
+	</p>
+</div>
+
+<br><br>
+
+<div class="row">
+	<ul class="social-group">
+		<% @urls[:code].each do |site, url| %>
+		<li>
+			<a href="<%= url %>" target="_blank" title="<%= site %>">
+				<div id="<%= site.to_s %>"  class="social">
+					<%= image_tag "social/#{ site }.png" %>
+				</div>
+			</a>
+		</li>
+		
+	<% end %>
+	</ul>
+</div>
+
+<div class="row social-row">
+	<ul class="social-group">
+		<% @urls[:social].each do |site, url| %>
+			<li>
+				<a href="<%= url %>" target="_blank" title="<%= site %>">
+					<div id="<%= site.to_s %>"  class="social">
+						<%= image_tag "social/#{ site }.png" %>
+					</div>
+				</a>
+			</li>
+		<% end %>
+	</ul>
+</div>
+
+<div class="row">
+	<p>
+		Image of meshed city here.
+	</p>
+</div>		

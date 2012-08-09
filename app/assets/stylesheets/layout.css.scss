@@ -1,0 +1,58 @@
+/*
+ * Contents ->
+ * .container, .content, hr, .row, .title, nav, section.page, footer
+ */
+
+@import "framework";
+
+.title {
+  width: 100%;
+  height: 130px;
+  text-align: center;
+  font-family: Copperplate, Copperplate Gothic Light, sans-serif;
+  font-size: 95pt;
+  font-weight: 300;
+  letter-spacing: -2px;
+  color: rgba(255, 255, 255, 0.6);
+  text-shadow: 0.4em 0.2em 0.1em rgba(230,255,0, 0.4),
+              -0.3em 0.05em 0.1em rgba(0,100,255, 0.4),
+              0.2em -0.2em 0.1em rgba(255,0,0, 0.4)
+}
+
+#nav {
+  margin-bottom: 3px;
+}
+
+nav {
+  ul {
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    padding-top: 5px;
+    margin-bottom: -5px;
+    font-size: 20pt;
+    li {
+      float: left;
+      @include space-children(77px);
+    }
+  }
+}
+
+section.page {
+  margin: 15px;
+}
+
+footer {
+  font-size: 9pt;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  .footer-top {
+    color: #aaa;
+    margin-top: 10px;
+  }
+  .footer-bottom {
+    color: #ccc;
+    margin-left: 3px;
+  }
+}
