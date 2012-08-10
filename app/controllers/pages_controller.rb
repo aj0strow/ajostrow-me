@@ -5,7 +5,14 @@ class PagesController < ApplicationController
   
   
   def contact
+    @city = current_city
     @urls = SOCIAL_URLS
+  end
+  
+  private
+  
+  def current_city
+    ['seattle', 'montreal'].first
   end
   
 end

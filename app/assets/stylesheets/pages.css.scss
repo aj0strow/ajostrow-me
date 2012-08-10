@@ -4,13 +4,14 @@
 
 $socialSpacing: 50px;
 $socialSize: 150px;
+$socialBorder: 12px;
 
 ul.social-group {
   
   list-style: none;
   display: inline-block;
   margin-bottom: $socialSpacing;
-  margin-left: 70px;
+  margin-left: ($siteWidth - 3*$socialSpacing - 2*$socialSize - 6*$socialBorder) / 4;
   
   li {
     float: left;
@@ -21,7 +22,7 @@ ul.social-group {
 .social {
   width: $socialSize; 
   height: $socialSize;
-  @include border-radius(12px);
+  @include border-radius($socialBorder);
   border: 10px solid;
   opacity: 0.75;
   &:hover {

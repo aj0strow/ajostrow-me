@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'omniauth-facebook', '1.4.0'
+gem 'httparty'
 gem 'jquery-rails'
 
 group :development do

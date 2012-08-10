@@ -39,6 +39,9 @@
 
 <div class="row">
 	<p>
-		Image of meshed city here.
+		I am currently in <%= @city.titleize %>:
+	</p>
+	<p>
+		<%= image_tag "cities/#{ @city }.jpg", style: 'width: 100%;' %>
 	</p>
 </div>		
