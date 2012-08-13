@@ -3,6 +3,9 @@ class PagesController < ApplicationController
   def about
   end
   
+  def projects
+    
+  end
   
   def contact
     @city = current_city
@@ -11,8 +14,8 @@ class PagesController < ApplicationController
   
   private
   
-  def current_city
-    ['seattle', 'montreal'].first
-  end
+    def current_city
+      ['seattle', 'montreal'].first
+    end
   
 end

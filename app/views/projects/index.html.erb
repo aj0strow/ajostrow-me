@@ -1,0 +1,7 @@
+<% if admin? %>
+	<%= link_to "Add project", new_project_path, class: 'btn' %>
+<% end %>
+
+<%= render @projects %>
+
+

@@ -2,6 +2,9 @@ AjostrowMe::Application.routes.draw do
  
   root to: 'Pages#about'
   match 'contact' => 'Pages#contact'
+  match 'experience' => 'Pages#experience'
+  
+  resources :projects
   
   match 'auth/:provider/callback', to: 'sessions#create'
   match 'auth/failure', to: redirect('/')
