@@ -12,3 +12,9 @@
     margin-top: 5px;
   }
 }
+
+.markdown {
+  margin-top: 15px;
+  background-color: #fff;
+  @include border-radius(10px);
+}

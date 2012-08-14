@@ -8,5 +8,9 @@ module ApplicationHelper
     false
   end
   
+  def markdown(text)
+    options = [ :autolink, :filter_html, :safelink ]
+    RDiscount.new(text, *options).to_html.html_safe
+  end
   
 end

@@ -3,8 +3,8 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'omniauth-facebook', '1.4.0'
 gem 'httparty'
-gem 'redcarpet'
-gem "dynamic_form"
+gem 'rdiscount'
+gem 'dynamic_form'
 gem 'jquery-rails'
 
 group :development do
