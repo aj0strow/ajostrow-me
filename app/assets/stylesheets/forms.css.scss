@@ -1,7 +1,17 @@
 @import "framework";
 
+@mixin text-input {
+  border: 2px solid #eee;
+  font-size: 1.01em;
+  outline: none;
+  padding: 5px;
+  &:focus {
+    border-color: rgba(46, 139, 87, 0.5);
+  }
+  @include border-radius(5px);
+}
+
 label {
-  width: 150px;
   display: block;
   font-size: 0.9em;
   color: #333;
@@ -10,25 +20,14 @@ label {
 } 
 
 input {
-  border: 2px solid #eee;
+  @include text-input;
   margin-bottom: 2px;
   width: 400px;
-  font-size: 1.01em;
-  @include border-radius(5px);
-  padding: 5px;
-  outline: none;
-  &:focus {
-    border-color: rgba(46, 139, 87, 0.5);
-  }
 }
 
 textarea {
-  border: 2px solid #eee;
-  font-size: 1.01em;
-  @include border-radius(5px);
+  @include text-input;
   width: 95%;
-  padding: 5px;
-  outline: none;
   resize: vertical;
 }
 

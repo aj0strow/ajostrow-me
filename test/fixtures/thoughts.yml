@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: thoughts
+#
+#  id         :integer         not null, primary key
+#  title      :string(255)
+#  blurb      :string(255)
+#  content    :text
+#  author     :string(255)
+#  created_at :datetime        not null
+#  updated_at :datetime        not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  blurb: MyString
+  content: MyText
+  author: MyString
+
+two:
+  title: MyString
+  blurb: MyString
+  content: MyText
+  author: MyString

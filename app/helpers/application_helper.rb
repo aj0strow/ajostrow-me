@@ -5,7 +5,8 @@ module ApplicationHelper
   end
   
   def editor?
-    false
+    editors = ['aj.ostrow']
+    current_user and editors.include? current_user[:info][:nickname]
   end
   
   def markdown(text)

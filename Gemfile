@@ -6,6 +6,7 @@ gem 'httparty'
 gem 'rdiscount'
 gem 'dynamic_form'
 gem 'jquery-rails'
+gem 'acts-as-taggable-on', '~> 2.3.1'
 
 group :development do
   gem 'sqlite3'

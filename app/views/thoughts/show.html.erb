@@ -1,0 +1,20 @@
+<% if editor? %>
+	<%= link_to 'Edit', edit_thought_path(@thought), class: 'pull-right'  %>
+<% end %>
+
+<h1>
+	<%= @thought.title %>
+</h1>
+
+<section class="markdown">
+	<%= markdown @thought.content %>
+</section>
+
+<p>
+	Tags: 
+	<% @thought.tag_list.each do |tag| %>
+		<%= link_to tag, thoughts_path(tags: [tag]), class: 'tag' %>
+	<% end %>
+</p>
+
+

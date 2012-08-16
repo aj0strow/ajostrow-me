@@ -1,0 +1,23 @@
+<%= form_for @thought do |f| %>
+
+	<h1>Share a thought</h1>
+
+	<%= f.error_messages header_message: "", header_tag: :span %>
+
+	<%= f.hidden_field :author %>
+
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	
+	<%= f.label :tag_list, 'Tag list (comma separated)' %>
+  <%= f.text_field :tag_list %>
+	
+	<%= f.label :blurb %>
+	<%= f.text_field :blurb %>
+	
+	<%= f.label :content %>
+	<%= f.text_area :content, placeholder: 'Descriptions are supposed to use markdown...' %>
+
+	<%= f.submit 'Save', class: 'btn' %>
+
+<% end %>

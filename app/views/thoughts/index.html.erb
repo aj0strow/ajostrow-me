@@ -1,0 +1,9 @@
+<% if editor? %>
+	<%= link_to "Share new thought", new_thought_path, class: 'btn' %>
+<% end %>
+
+<% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+  <%= link_to tag.name, thoughts_path(tags: [tag.to_s]), :class => css_class %>
+<% end %>
+
+<%= render @thoughts %>
