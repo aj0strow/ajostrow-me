@@ -73,6 +73,10 @@ em {
   font-style: italic;
 }
 
+abbr, acronym {
+  border-bottom: 1px dotted #aaa;
+}
+
 img.wrap-text {
   float: left;
   margin-top: 4px;
@@ -99,6 +103,10 @@ small {
   font-size: 0.8em;
   margin-left: 5px;
   text-shadow: none;
+}
+
+.crossed-out {
+  text-decoration: line-through;
 }
 
 .pull-right {
