@@ -9,8 +9,14 @@ $sitePadding: 10px;
 }
 
 @mixin border-radius($thickness) {
-  border-radius: $thickness;
-  -moz-border-radius: $thickness;
   -webkit-border-radius: $thickness;
-  -o-border-radius: $thickness;
+     -moz-border-radius: $thickness;
+       -o-border-radius: $thickness;
+          border-radius: $thickness;
+}
+
+@mixin box-sizing {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }

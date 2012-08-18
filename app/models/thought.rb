@@ -21,4 +21,8 @@ class Thought < ActiveRecord::Base
   
   acts_as_taggable
   
+  def display_time
+    updated_at.strftime "%b %-d, %Y"
+  end
+  
 end

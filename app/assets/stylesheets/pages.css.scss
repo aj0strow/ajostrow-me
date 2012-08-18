@@ -1,62 +1,26 @@
 @import "framework";
 
-/* Contact */
-
-$socialSpacing: 50px;
-$socialSize: 150px;
-$socialBorder: 12px;
-
-ul.social-group {
-  
-  list-style: none;
-  display: inline-block;
-  margin-bottom: $socialSpacing;
-  margin-left: ($siteWidth - 3*$socialSpacing - 2*$socialSize - 6*$socialBorder) / 4;
-  
-  li {
-    float: left;
-    @include space-children($socialSpacing);
+.experience-section {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  .image {
+    width: 30%;
+    img {
+      width: 100%;
+      box-shadow: 0 4px 6px -6px black;
+    }
+    span {
+      width: 100%;
+      padding-top: 5px;
+      display: block;
+      text-align: center;
+    }
+  }
+  .content {
+    width: 70%;
+    div {
+      padding: 5px 25px;
+    }
   }
 }
 
-.social {
-  width: $socialSize; 
-  height: $socialSize;
-  @include border-radius($socialBorder);
-  border: 10px solid;
-  opacity: 0.75;
-  &:hover {
-    opacity: 1;
-    background-color: #fff;
-  }
-  img {
-    width: 145px;
-    height: 145px;
-    margin: auto;
-  }
-}
-
-#stackoverflow {
-  border-color: #f47a20;
-  /* alt: #f68a1f, #d28a29, #c09452, #a68a6e, #818185 */
-}
-
-#github {
-  border-color: #2e3436;
-}
-
-#linkedin {
-  border-color: #137eb1;
-}
-
-#facebook {
-  border-color: #2e3f73;
-}
-
-#twitter {
-  border-color: #33ccff;
-}
-
-#googleplus {
-  border-color: #cf4332;
-}

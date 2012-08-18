@@ -1,47 +1,34 @@
 <div class="row">
 	<p>
-		Feel free to get a hold of me. I check messages frequently on any of the sites below. 
-		However I do ask that if you have questions about specific problems or you need help, 
-		please exhaust every other resource online before you bother me, thanks!
+		I check messages frequently on any of the sites below. However, I must ask that if 
+		you have specific questions or you need help, please thoroughly research online before 
+		you ask me, thanks!
 	</p>
 </div>
 
 <br><br>
 
-<div class="row">
-	<ul class="social-group">
-		<% @urls[:code].each do |site, url| %>
-		<li>
-			<a href="<%= url %>" target="_blank" title="<%= site %>">
-				<div id="<%= site.to_s %>"  class="social">
-					<%= image_tag "social/#{ site }.png" %>
-				</div>
-			</a>
-		</li>
-		
-	<% end %>
-	</ul>
-</div>
-
-<div class="row social-row">
-	<ul class="social-group">
-		<% @urls[:social].each do |site, url| %>
+<% @urls.each_slice(3) do |social_row| %>
+	<div class="row">
+		<ul class="social-group">
+			<% social_row.each do |site, url| %>
 			<li>
-				<a href="<%= url %>" target="_blank" title="<%= site %>">
-					<div id="<%= site.to_s %>"  class="social">
+				<a href="<%= url %>" target="_blank" title="<%= site.titleize %>">
+					<div id="<%= site %>"  class="social">
 						<%= image_tag "social/#{ site }.png" %>
 					</div>
 				</a>
 			</li>
 		<% end %>
-	</ul>
-</div>
+		</ul>
+	</div>
+<% end %>
 
 <div class="row">
 	<p>
-		I am currently in <%= @city.titleize %>:
+		I am currently in <%= @city %>:
 	</p>
 	<p>
-		<%= image_tag "cities/#{ @city }.jpg", style: 'width: 100%;' %>
+		<%= image_tag "cities/#{ @city.downcase.dasherize }.jpg", style: 'width: 100%;' %>
 	</p>
 </div>		

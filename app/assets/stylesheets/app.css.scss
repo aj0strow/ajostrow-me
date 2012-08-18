@@ -60,6 +60,7 @@ a, :link {
     color: #888;
   }
   &:active {
+    padding-top: 2px;
     color: #000;
   }
 }
@@ -81,10 +82,12 @@ img.wrap-text {
 
 h1 {
   font-size: 1.8em;
+  text-shadow: 0.05em 0.08em 0.1em #aaa;
 }
 
 h2 {
   font-size: 1.5em;
+  text-shadow: 0.05em 0.08em 0.1em #aaa;
 }
 
 h3 {
@@ -95,115 +98,15 @@ small {
   color: #777;
   font-size: 0.8em;
   margin-left: 5px;
+  text-shadow: none;
 }
 
 .pull-right {
   float: right;
   text-align: left;
-  margin-right: 35px;
 }
 
-/*
-
-
-
-img.wrap-around {
-  
+.tag {
+  border-bottom: 2px dotted;
+  margin-left: 5px;
 }
-
-a {
-  
-}
-
-a:hover {
-  
-}
-
-abbr {
-  border-bottom: dotted 1px;  
-  cursor: help;
-}
-
-
-
-
-/* Contact Page */
-/*
-div.contact-info {
-  float: left;
-  width: 50%;
-  margin-bottom: 15px;
-}
-
-div.contact-info * {
-  margin-left: 50px;
-}
-
-div.social-media {
-  width: 25%;
-  float: left;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-div.social-media div {
-  height: 120px;
-  margin: 5px;
-  border: 5px solid;
-      
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 15pt;
-  line-height: 110px;
-  
-  border-radius: 8px;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -o-border-radius: 8px;
-}
-
-#facebook {
-  border-color: rgba(59, 89, 152, 0.6);
-  background-color: rgba(59, 89, 152, 0.08);
-}
-
-#google-plus {
-  border-color: rgba(214, 73, 42, 0.6);
-  background-color: rgba(214, 73, 42, 0.08);
-}
-
-#linked-in {
-  border-color: rgba(72, 117, 180, 0.6);
-  background-color: rgba(72, 117, 180, 0.08);
-}
-
-#twitter {
-  border-color: rgba(51, 204, 255, 0.6);
-  background-color: rgba(51, 204, 255, 0.08);
-  background-image: url(../img/social/twitter.png);
-  background-size:100px 100px;
-  background-repeat:no-repeat;
-  background-position: center;
-}
-
-
-/* Projects */
-/*
-h2 small {
-  color: #777;
-}
-
-div.pagination {
-  margin-left: 220px;
-  padding-top: 50px;
-}
-
-div.pagination li {
-  float: left;
-  margin-left: 35px;
-}
-
-div.pagination li span {
-  cursor: pointer;
-}
-
-*/

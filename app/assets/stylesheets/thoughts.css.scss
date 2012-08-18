@@ -1,4 +1,21 @@
+@import "framework";
+
 .css1 { font-size: 1.0em; }
 .css2 { font-size: 1.2em; }
 .css3 { font-size: 1.4em; }
 .css4 { font-size: 1.6em; }
+
+.thought {
+  @include border-radius(3px);
+  @include box-sizing;
+  padding: 3px;
+  margin-top: 20px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  &:hover {
+    background-color: #f5f5f5;
+  }
+  p {
+    margin-top: 5px;
+  }
+}
+

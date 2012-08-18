@@ -5,6 +5,11 @@
 <h1>
 	<%= @thought.title %>
 </h1>
+<h3>
+	<small>
+		<%= [@thought.author, @thought.display_time].join ', ' %>
+	</small>
+</h3>
 
 <section class="markdown">
 	<%= markdown @thought.content %>

@@ -1,14 +1,14 @@
-<%= link_to project do %>
-	<div class="row project">
-		<span class="pull-right">
-			<%= project.finished_at %>
-		</span>
-		<h2>
-			<%= project.name %>
-			<small><%= project.language %></small>
-		</h2>
-		<p>
-			<%= project.blurb %>
-		</p>
-	</div>
-<% end %>
+	<%= link_to project do %>
+		<div class="project">
+			<h2>
+				<%= project.name %>
+				<small><%= project.language %></small>
+			</h2>
+			<span class="pull-right">
+				<%= project.finished_at %>
+			</span>
+			<p>
+				<%= project.blurb %>
+			</p>
+		</div>
+	<% end %>
