@@ -19,6 +19,8 @@ class Thought < ActiveRecord::Base
   validates :content, presence: true
   validates :title, presence: true
   
+  has_many :comments, as: :commentable, dependent: :destroy
+  
   acts_as_taggable
   
   def display_time

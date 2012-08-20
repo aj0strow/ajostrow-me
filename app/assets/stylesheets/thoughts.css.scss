@@ -1,9 +1,24 @@
 @import "framework";
 
-.css1 { font-size: 1.0em; }
-.css2 { font-size: 1.2em; }
-.css3 { font-size: 1.4em; }
-.css4 { font-size: 1.6em; }
+@mixin tag($size, $color) {
+  font-size: $size;
+  color: $color;
+  margin: 0 5px;
+}
+
+/* Tag cloud */
+.tag-huge {
+  @include tag(1.6em, #333);
+}
+.tag-large {
+  @include tag(1.4em, #444);
+}
+.tag-medium {
+  @include tag(1.2em, #555);
+}
+.tag-small {
+  @include tag(1.0em, #666);
+}
 
 .thought {
   @include border-radius(3px);
@@ -16,5 +31,17 @@
   }
   p {
     margin-top: 5px;
+  }
+}
+
+.discussion {
+  .comment {
+    padding-top: 5px;
+  }
+  .content {
+    padding-left: 10px;
+  }
+  .replies {
+    padding-left: 50px;
   }
 }

@@ -2,6 +2,10 @@
 	<%= link_to 'Edit', edit_thought_path(@thought), class: 'pull-right'  %>
 <% end %>
 
+<span class="pull-right">
+	<a href="#" id="copy-link">Copy tizext</a>
+</span>
+
 <h1>
 	<%= @thought.title %>
 </h1>
@@ -21,5 +25,11 @@
 		<%= link_to tag, thoughts_path(tags: [tag]), class: 'tag' %>
 	<% end %>
 </p>
+
+<div class="discussion">
+	<%= render @thought.comments %>
+</div>
+
+<span id="link" class="link"><%= thought_url(@thought) %></span>
 
 

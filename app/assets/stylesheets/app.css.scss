@@ -56,13 +56,13 @@ a, :link {
   font-size: 0.9em;
   text-decoration: none;
   color: #222;
-  &:hover {
-    color: #888;
-  }
-  &:active {
-    padding-top: 2px;
-    color: #000;
-  }
+}
+a:hover, a.hover {
+  color: #888;
+}
+a:active, a.active {
+  padding-top: 1px;
+  color: #000;
 }
 
 p {
@@ -117,4 +117,8 @@ small {
 .tag {
   border-bottom: 2px dotted;
   margin-left: 5px;
+}
+
+span.link {
+  display: none;
 }
