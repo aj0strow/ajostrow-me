@@ -1,14 +1,16 @@
-<% get_facebook_info comment[:facebook_uid] %>
-
-<div class="row comment">
-	<div>
-		<%= image_tag facebook_image_path( comment[:facebook_uid] ) %>
+<% unless comment.created_at.nil? %>
+	<% get_facebook_info comment[:facebook_uid] %>
+	
+	<div class="row comment">
+		<div>
+			<%= image_tag facebook_image_path( comment[:facebook_uid] ) %>
+		</div>
+		<div class="content">
+			<h3><%= facebook_name comment[:facebook_uid] %></h3>
+			<%= comment.content %>
+		</div>
 	</div>
-	<div class="content">
-		<h3><%= facebook_name comment[:facebook_uid] %></h3>
-		<%= comment.content %>
+	<div class="replies">
+		<%= render comment.comments %>
 	</div>
-</div>
-<div class="replies">
-	<%= render comment.comments %>
-</div>
+<% end %>

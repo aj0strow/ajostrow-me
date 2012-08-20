@@ -27,6 +27,17 @@
 </p>
 
 <div class="discussion">
+	<% if current_user %>
+		<%= form_for @thought.comments.build, remote: true do |f| %>
+			<%= f.hidden_field :facebook_uid, value: current_user[:uid] %>
+			
+			<%= f.label :content, "#{ @thought.comments.count > 0 ? 'Join' : 'Start'  } the discussion \u00BB" %>
+			<%= f.text_area :content, class: 'comment-textarea', rows: 2, placeholder: 'Comments are rendered as markdown...' %>
+			
+			<%= f.submit 'Share', class: 'btn comment-btn' %>
+		<% end %>
+	<% end %>
+	
 	<%= render @thought.comments %>
 </div>
 
