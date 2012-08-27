@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   
+  before_filter :admins_only, except: [:show, :index]
   
   def new
     @project = Project.new

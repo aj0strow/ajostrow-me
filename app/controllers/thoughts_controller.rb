@@ -1,6 +1,8 @@
 class ThoughtsController < ApplicationController
   include ThoughtsHelper
   
+  before_filter :editors_only, except: [:index, :show]
+  
   def new
     @thought = Thought.new
     @thought.author = current_user[:info][:name] if current_user
