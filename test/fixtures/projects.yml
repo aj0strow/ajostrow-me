@@ -18,16 +18,18 @@
 
 one:
   finished_at: 2012-08-12 22:29:57
-  name: MyString
-  blurb: MyString
-  description: MyText
-  project_url: MyString
-  code_url: MyString
+  name: First Project
+  blurb: Not important
+  description: Should be a paragraph
+  project_url: http://www.google.com/
+  code_url: http://www.google.com/
+  language: java
 
 two:
   finished_at: 2012-08-12 22:29:57
-  name: MyString
-  blurb: MyString
-  description: MyText
-  project_url: MyString
-  code_url: MyString
+  name: Second Project
+  blurb: Not interesting at all
+  description: Need to learn how to do multiline strs in yaml
+  project_url: http://www.yahoo.com/
+  code_url: http://www.yahoo.com/
+  language: ruby

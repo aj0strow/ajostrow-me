@@ -14,7 +14,36 @@
 require 'test_helper'
 
 class ThoughtTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  def setup
+    @thought = Thought.new title: 'Title', blurb: 'Blurb', content: 'content, content', author: 'aj.ostrow'
+  end
+    
+  test 'create a thought' do
+    assert @thought.save
+  end
+  
+  test 'thought must have title' do
+    @thought.title = nil
+    assert !@thought.save
+    
+    @thought.title = ''
+    assert !@thought.save
+  end
+  
+  test 'thought must have blurb' do
+    @thought.blurb = ''
+    assert !@thought.save
+  end
+  
+  test 'thought must have content' do
+    @thought.content = ''
+    assert !@thought.save
+  end
+  
+  test 'thought must have author' do
+    @thought.author = ''
+    assert !@thought.save
+  end
+
 end

@@ -14,13 +14,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  title: MyString
-  blurb: MyString
-  content: MyText
-  author: MyString
+  title: Test article one
+  blurb: This is a cool article!
+  content: hello
+  author: AJ Ostrow
 
 two:
-  title: MyString
-  blurb: MyString
-  content: MyText
-  author: MyString
+  title: Yet another test article
+  blurb: Fascinating really
+  content: Dont know how to do multiline
+  author: AJ Ostrow

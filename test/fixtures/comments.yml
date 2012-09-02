@@ -13,14 +13,14 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  thought_id: 1
-  comment_id: 1
-  facebook_uid: MyString
-  content: MyText
+comment:
+  commentable_id: 1
+  commentable_type: Thought
+  facebook_uid: aj.ostrow
+  content: Insightful review
 
-two:
-  thought_id: 1
-  comment_id: 1
-  facebook_uid: MyString
-  content: MyText
+reply:
+  commentable_id: 1
+  commentable_type: Comment
+  facebook_uid: aj.ostrow
+  content: Quick revisionary comment

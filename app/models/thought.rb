@@ -13,12 +13,12 @@
 
 class Thought < ActiveRecord::Base
   
-  attr_accessible :author, :blurb, :content, :title, :tag_list
+  attr_accessible :title, :author, :blurb, :content, :tag_list
   
-  validates :blurb, presence: true
-  validates :content, presence: true
-  validates :title, presence: true
-  
+  [:title, :blurb, :content, :author].each do |field| 
+    validates field, presence: true
+  end
+    
   has_many :comments, as: :commentable, dependent: :destroy
   
   acts_as_taggable
