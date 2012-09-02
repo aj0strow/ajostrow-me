@@ -15,8 +15,14 @@ require 'test_helper'
 
 class ThoughtTest < ActiveSupport::TestCase
   
-  def setup
-    @thought = Thought.new title: 'Title', blurb: 'Blurb', content: 'content, content', author: 'aj.ostrow'
+  setup do
+    fields = {
+      title: 'Title', 
+      blurb: 'Blurb', 
+      content: 'content, content', 
+      author: 'aj.ostrow'
+    }
+    @thought = Thought.new fields
   end
     
   test 'create a thought' do

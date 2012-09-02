@@ -18,7 +18,7 @@ require 'test_helper'
 
 class ProjectTest < ActiveSupport::TestCase
   
-  def setup
+  setup do
     fields = {
       finished_at: Time.now.to_datetime, 
       name: 'Cool project', 

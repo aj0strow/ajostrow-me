@@ -12,7 +12,12 @@
 #
 
 class Comment < ActiveRecord::Base
-  attr_accessible :commentable_id, :commentable_type, :content, :facebook_uid
+  
+  attr_accessible :commentable_id, :commentable_type, :facebook_uid, :content
+  
+  [:commentable_id, :commentable_type, :facebook_uid, :content].each do |field|
+    validates field, presence: true
+  end
     
   belongs_to :commentable, polymorphic: true
   has_many :comments, as: :commentable, dependent: :destroy

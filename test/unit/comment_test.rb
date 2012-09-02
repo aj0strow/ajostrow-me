@@ -14,7 +14,36 @@
 require 'test_helper'
 
 class CommentTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  
+  setup do
+    fields = {
+      commentable_id: 1, 
+      commentable_type: "Thought",
+      facebook_uid: 'aj.ostrow',
+      content: 'cool insight!'
+    }
+    @comment = Comment.new fields
+  end
+  
+  test "create a comment" do
+    assert @comment.save
+  end
+  
+  test "comment must have a parent" do 
+    #the type and id go together for polymorphic relationship
+    
+    @comment.commentable_id = nil
+    assert !@comment.save
+  end
+  
+  test "comment must have a facebook user id" do
+    @comment.facebook_uid = nil
+    assert !@comment.save
+  end
+  
+  test "comment must have some content" do
+    @comment.content = ''
+    assert !@comment.save
+  end
+  
 end
