@@ -22,7 +22,7 @@ class Project < ActiveRecord::Base
   validates :blurb, presence: true
   validates :language, presence: true
   validates :project_url, format: URI::regexp( %w[ http https ] )
-  validates :code_url, format: URI::regexp( %w[ http https ] )
+  validates :code_url, format: URI::regexp( %w[ http https ] ), allow_nil: true
   validates :finished_at, presence: true
   validates :description, presence: true, length: { maximum: 10_000 }
 

@@ -4,9 +4,10 @@
 <% end %>
 
 <span class="pull-right">
-	<%= link_to 'Project Page', @project.project_url, target: '_blank' %> 
-	|
-	<%= link_to 'Source Code', @project.code_url, target: '_blank' %>
+	<%= link_to 'Project Page', @project.project_url, target: '_blank' %>
+	<% unless @project.code_url.blank? %> 
+		| <%= link_to 'Source Code', @project.code_url, target: '_blank' %>
+	<% end %>
 </span>
 
 <h1>
