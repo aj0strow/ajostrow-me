@@ -1,0 +1,23 @@
+@import "framework";
+
+.markdown {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.CodeRay {
+  @include border-radius(3px);
+  @include box-sizing;
+  width: 100%;
+  background: rgba(0,0,0,0.1);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 1.2em;
+}

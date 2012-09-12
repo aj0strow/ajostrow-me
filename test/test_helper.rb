@@ -12,7 +12,7 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
   
   def login_with_facebook
-    get '/auth/facebook'
+    get '/auth/facebook', controller: :sessions
   end
   
   OmniAuth.config.test_mode = true

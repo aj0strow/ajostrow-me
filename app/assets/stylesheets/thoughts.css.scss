@@ -34,15 +34,6 @@
   }
 }
 
-.CodeRay {
-  @include border-radius(3px);
-  @include box-sizing;
-  width: 100%;
-  background: rgba(0,0,0,0.1);
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
 .discussion {
   .comment {
     padding-top: 10px;
