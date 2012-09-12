@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   
     def current_city
       json = HTTParty.get 'https://www.google.com/latitude/apps/badge/api?user=4577041489618274709&type=json'
-      if json
+      if json and json['features'].any?
         json['features'].first['properties']['reverseGeocode'].split(',').first
       else
         'montreal'

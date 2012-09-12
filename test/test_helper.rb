@@ -10,4 +10,18 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  
+  def login_with_facebook
+    get '/auth/facebook'
+  end
+  
+  OmniAuth.config.test_mode = true
+  OmniAuth.config.mock_auth[:facebook] = {
+    'user_info' => { 'name' => 'Mario Brothers', 'image' => '', 'email' => 'dpsk@email.ru' },
+    'uid' => '123545',
+    'provider' => 'facebook',
+    'credentials' => {'token' => 'token'}
+  }
+
+
 end

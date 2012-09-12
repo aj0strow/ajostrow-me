@@ -24,8 +24,31 @@ module ApplicationHelper
   end
   
   def markdown(text)
-    options = [ :autolink, :filter_html, :safelink ]
-    RDiscount.new(text, *options).to_html.html_safe
+    options = [ :autolink, :safelink ]
+    text = coderay(text)
+    text = RDiscount.new(text, *options).to_html
+    # RDiscount.new( coderay(text), *options).to_html.html_safe
+    # text.gsub(/```([a-z]*)(.*?)```/m) do
+    #   CodeRay.scan($2, $1).div( css: :class )
+    # end
+    return text.html_safe
   end
+  
+  def coderay(text)
+    text.gsub(/```([a-z]*)(.*?)```/m) do
+      lang = coderay_language( $1 )
+      CodeRay.scan($2, lang).div
+    end
+  end
+  
+  private
+  
+    def coderay_language(language)
+      unless language.blank?
+        language.to_sym
+      else
+        :coderay
+      end
+    end
   
 end

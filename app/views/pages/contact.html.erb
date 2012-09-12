@@ -11,22 +11,24 @@
 <% @urls.each_slice(3) do |social_row| %>
 	<div class="row">
 		<ul class="social-group">
+			
 			<% social_row.each do |site, url| %>
-			<li>
-				<a href="<%= url %>" target="_blank" title="<%= site.titleize %>">
-					<div id="<%= site %>"  class="social">
-						<%= image_tag "social/#{ site }.png" %>
-					</div>
-				</a>
-			</li>
-		<% end %>
+				<li>
+					<a href="<%= url %>" target="_blank" title="<%= site.titleize %>">
+						<div id="<%= site %>"  class="social">
+							<%= image_tag "social/#{ site }.png" %>
+						</div>
+					</a>
+				</li>
+			<% end %>
+		
 		</ul>
 	</div>
 <% end %>
 
 <div class="row">
 	<p>
-		I am currently in <%= @city %>:
+		I am currently in <%= @city.titleize %>:
 	</p>
 	<p>
 		<%= image_tag "cities/#{ @city.downcase.dasherize }.jpg", style: 'width: 100%;' %>

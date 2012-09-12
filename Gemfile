@@ -3,10 +3,13 @@ source 'https://rubygems.org'
 gem 'rails'
 gem 'omniauth-facebook', '1.4.0'
 gem 'httparty'
-gem 'rdiscount'
 gem 'dynamic_form'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on', '~> 2.3.1'
+
+# markdown solutions
+gem 'rdiscount'
+gem 'coderay'
 
 group :development do
   gem 'sqlite3'
