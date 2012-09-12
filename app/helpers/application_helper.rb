@@ -27,10 +27,6 @@ module ApplicationHelper
     options = [ :autolink, :safelink ]
     text = coderay(text)
     text = RDiscount.new(text, *options).to_html
-    # RDiscount.new( coderay(text), *options).to_html.html_safe
-    # text.gsub(/```([a-z]*)(.*?)```/m) do
-    #   CodeRay.scan($2, $1).div( css: :class )
-    # end
     return text.html_safe
   end
   
