@@ -22,7 +22,7 @@
 	  
 	  $('#sign_in').click(function(e){
 	  	e.preventDefault();
-	  	FB.login(function(res){
+	  	FB.login(function(response){
 	  		if(response.authResponse){
 	  			window.location = '/auth/facebook/callback';
 	  		}
