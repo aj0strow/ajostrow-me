@@ -18,6 +18,8 @@
 	     document.getElementById('fb-root').appendChild(e);
 	  }());
 	  
+	  FB.getLoginStatus(function(res){});
+	  
 	  $('#sign_in').click(function(e){
 	  	e.preventDefault();
 	  	FB.login(function(res){
