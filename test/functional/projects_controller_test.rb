@@ -27,12 +27,5 @@ class ProjectsControllerTest < ActionController::TestCase
     put :update
     assert_response :redirect
   end
-  
-  test 'signed in' do
-    login_with_facebook
-    
-    get :new
-    assert_response :success
-  end
 
 end

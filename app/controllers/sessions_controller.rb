@@ -12,6 +12,6 @@ class SessionsController < ApplicationController
   private
   
     def previous_url
-      session[:previous_url] || root_path
+      "#{ session[:previous_url] }#nav" || root_path
     end
 end
