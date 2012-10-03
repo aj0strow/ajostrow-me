@@ -32,6 +32,12 @@ div.content {
   margin: auto;
 }
 
+.navigation {
+  padding-top: 3px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#fafafa), to(#fafafa), color-stop(0.5, #f7f7f7));
+  background-image:    -moz-linear-gradient(to right,#fafafa, #f7f7f7, #fafafa);
+}
+
 hr {
   margin-left: -$sitePadding;
   width: $siteWidth + $sitePadding*2;
