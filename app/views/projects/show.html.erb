@@ -18,4 +18,8 @@
 	<%= markdown @project.description %>
 </section>	
 
-
+<% if admin? %>
+	<br>
+	<%= link_to "Delete project", @project, method: :delete, 
+		confirm: 'Are you sure you want to delete this project forever?', class: 'delete-button' %>
+<% end %>

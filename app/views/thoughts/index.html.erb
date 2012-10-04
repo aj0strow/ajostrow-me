@@ -6,4 +6,7 @@
   <%= link_to tag.name, thoughts_path(tags: [tag.to_s]), :class => css_class %>
 <% end %>
 
-<%= render @thoughts %>
+<div class="thoughts">
+	<%= render @thoughts %>
+</div>
+

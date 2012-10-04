@@ -20,40 +20,26 @@ div {
   overflow: hidden;
 }
 
-div.container {
-  display: block;
-  margin: auto;
-  width: $siteWidth;
-  padding: $sitePadding;
-}
-
-div.content {
-  display: block;
-  margin: auto;
-}
-
-.navigation {
-  padding-top: 3px;
-  background-image: -webkit-gradient(linear, left top, right top, from(#fafafa), to(#fafafa), color-stop(0.5, #f7f7f7));
-  background-image:    -moz-linear-gradient(to right,#fafafa, #f7f7f7, #fafafa);
-}
-
-hr {
-  margin-left: -$sitePadding;
-  width: $siteWidth + $sitePadding*2;
-  height: 1px;
-  color: #ddd;
-  background-color: #ddd;
-  border: none;
-  clear: both;
-}
-
 .row {
   width: 100%;
   clear: both;
   div {
     float: left;
   }
+}
+
+.container {
+  display: block;
+  margin: auto;
+  width: $siteWidth;
+  padding-left: $sitePadding 0;
+}
+
+.content {
+  padding-top: $sitePadding;
+  padding-bottom: $sitePadding;
+  display: block;
+  margin: auto;
 }
 
 a, :link {
@@ -92,12 +78,12 @@ img.wrap-text {
 
 h1 {
   font-size: 1.8em;
-  text-shadow: 0.05em 0.08em 0.1em #aaa;
+  text-shadow: 0.05em 0.08em 0.15em rgba(0,0,0,0.3);
 }
 
 h2 {
   font-size: 1.5em;
-  text-shadow: 0.05em 0.08em 0.1em #aaa;
+  text-shadow: 0.05em 0.08em 0.15em rgba(0,0,0,0.3);
 }
 
 h3 {

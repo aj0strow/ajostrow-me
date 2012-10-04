@@ -1,33 +1,33 @@
 <header>
 	
-	<div class="row title">
-		AJ Ostrow
+	<div class="container">
+		<div class="row title">
+			AJ Ostrow
+		</div>
 	</div>
 	
 	<div id="nav"></div>
-	
-	<hr>
-	
-	<nav class="row navigation">
-		<ul>
-			<li>
-				<%= link_to 'About', root_path(anchor: 'nav') %>
-			</li>
-			<li class="element">
-				<%= link_to 'Thoughts', thoughts_path(anchor: 'nav') %>
-			</li>
-			<li class="element">
-				<%= link_to 'Projects', projects_path(anchor: 'nav') %>
-			</li>
-			<li class="element">
-				<%= link_to 'Experience', experience_path(anchor: 'nav') %>
-			</li>
-			<li class="element">
-				<%= link_to 'Contact', contact_path(anchor: 'nav') %>
-			</li>
-		</ul>
+		
+	<nav class="navigation">
+		<div class="container">
+			<ul>
+				<li>
+					<%= link_to 'About', root_path(anchor: 'nav') %>
+				</li>
+				<li class="element">
+					<%= link_to 'Thoughts', thoughts_path(anchor: 'nav') %>
+				</li>
+				<li class="element">
+					<%= link_to 'Projects', projects_path(anchor: 'nav') %>
+				</li>
+				<li class="element">
+					<%= link_to 'Experience', experience_path(anchor: 'nav') %>
+				</li>
+				<li class="element">
+					<%= link_to 'Contact', contact_path(anchor: 'nav') %>
+				</li>
+			</ul>
+		</div>
 	</nav>
 	
-	<hr>
-
 </header>

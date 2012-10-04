@@ -24,3 +24,12 @@
   }
 }
 
+.delete-button {
+  margin-top: 20px;
+  background-color: #cc0000;
+  color: #ddd;
+  @include border-radius(3px);
+  border: 1px solid #777;
+  padding: 5px;
+}
+

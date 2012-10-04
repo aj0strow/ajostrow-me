@@ -26,6 +26,12 @@
 	<% end %>
 </p>
 
+<% if admin? %>
+	<br>
+	<%= link_to "Delete article", @thought, method: :delete, 
+		confirm: 'Are you sure you want to delete this article forever?', class: 'delete-button' %>
+<% end %>
+
 <div class="discussion">
 	<% if current_user %>
 		<%= form_for @thought.comments.build, remote: true do |f| %>

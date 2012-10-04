@@ -1,23 +1,25 @@
-<footer>
+<footer class="footer">
 	
-	<hr>
+	<div class="container">
 		
-	<div class="row footer-top">
-		01010100 01101000 01100001 01101110 01101011 01110011 00100000 01100110 01101111 01110010 00100000 01110110 
-	</div>
-	<div class="row footer-bottom">
-		01101001 01110011 01101001 01110100 01101001 01101110 01100111 00100001 
-	</div>
-
-	<br>
-
-	<div id="user_nav">
-	  <% if current_user %>
-	    Signed in as <strong><%= current_user[:info][:name] %></strong> &nbsp;
-	    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-	  <% else %>
-	    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-	  <% end %>
-	</div>
+		<div class="row footer-top">
+			01010100 01101000 01100001 01101110 01101011 01110011 00100000 01100110 01101111 01110010 00100000 01110110 
+		</div>
+		<div class="row footer-bottom">
+			01101001 01110011 01101001 01110100 01101001 01101110 01100111 00100001 
+		</div>
+	
+		<br>
+	
+		<div id="user_nav">
+		  <% if current_user %>
+		    Signed in as <strong><%= current_user[:info][:name] %></strong> &nbsp;
+		    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+		  <% else %>
+		    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+		  <% end %>
+		</div>
+				
+	</div>	
 
 </footer>

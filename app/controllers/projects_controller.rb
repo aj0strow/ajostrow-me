@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   before_filter :admins_only, except: [:show, :index]
   
   def index
-    @projects = Project.find :all, order: 'finished_at desc'
+    @projects = Project.find :all, order: 'finished_at DESC'
   end
   
   def show
@@ -41,9 +41,6 @@ class ProjectsController < ApplicationController
   def destroy
     Project.find(params[:id]).destroy
     redirect_to projects_path
-  end
-  
-
-  
+  end  
   
 end

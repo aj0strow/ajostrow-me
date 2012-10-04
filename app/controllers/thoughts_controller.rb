@@ -2,6 +2,7 @@ class ThoughtsController < ApplicationController
   include ThoughtsHelper
   
   before_filter :editors_only, except: [:index, :show]
+  before_filter :admins_only, only: [:destroy]
   
   def new
     @thought = Thought.new
@@ -40,8 +41,13 @@ class ThoughtsController < ApplicationController
     if params[:tags]
       @thoughts = Thought.tagged_with params[:tags], any: true
     else
-      @thoughts = Thought.all
+      @thoughts = Thought.find :all, order: 'updated_at DESC'
     end
+  end
+  
+  def destroy
+    Thought.find(params[:id]).destroy
+    redirect_to thoughts_path
   end
   
 end
