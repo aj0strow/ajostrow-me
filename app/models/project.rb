@@ -25,6 +25,9 @@ class Project < ActiveRecord::Base
   validates :code_url, format: URI::regexp( %w[ http https ] ), allow_nil: true
   validates :finished_at, presence: true
   validates :description, presence: true, length: { maximum: 10_000 }
+  
+  extend FriendlyId
+  friendly_id :name, use: [:slugged, :history]
 
   def finished_at=(date)
     write_attribute :finished_at, date.to_datetime

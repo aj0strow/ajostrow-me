@@ -21,6 +21,9 @@ class ThoughtsController < ApplicationController
   def show
     @thought = Thought.find params[:id]
     @facebook_data = {}
+    if request.path != thought_path(@thought)
+      redirect_to @thought, status: :moved_permanently
+    end
   end
   
   def edit

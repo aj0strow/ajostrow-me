@@ -21,6 +21,11 @@ class Thought < ActiveRecord::Base
     
   has_many :comments, as: :commentable, dependent: :destroy
   
+  # external plugins
+  
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+  
   acts_as_taggable
   
   def display_time
