@@ -24,10 +24,33 @@
 
 .navigation {
   padding-top: 10px;
+  padding-bottom: 0;
   border-bottom: 1px solid #eee;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fafafa', endColorstr='#f7f7f7');
   background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f7f7f7));
   background: -moz-linear-gradient(top, #fafafa, #f7f7f7);
+  overflow: visible;
+  
+  .container {
+    overflow: visible;
+  }
+  
+  ul {
+    margin-bottom: -5px;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    font-size: 20pt;
+    li {      
+      float: left;
+      @include space-children(77px);
+    }
+  }
+}
+
+.nav-active {
+  border-bottom: 1px solid rgba(130,40,205, 0.1);
+  text-shadow: 0 0 0.04em rgba(0,0,0,0.2);
 }
 
 .footer {
@@ -44,19 +67,6 @@
   .footer-bottom {
     color: #ccc;
     margin-left: 3px;
-  }
-}
-
-nav {
-  ul {
-    width: 100%;
-    list-style: none;
-    display: inline-block;
-    font-size: 20pt;
-    li {
-      float: left;
-      @include space-children(77px);
-    }
   }
 }
 

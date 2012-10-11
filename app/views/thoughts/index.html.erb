@@ -55,7 +55,7 @@
 	        .style("font-size", function(d) { return d.size + "px"; })
 	        .style("cursor", "pointer")
 	        .on("click", function(d) {
-		        window.location.href = "/thoughts?tags%5B%5D=" + d.text;
+		        window.location.href = "/thoughts?tags%5B%5D=" + d.text + "#nav";
 	    			return false;
 		      })
 		      .on("mouseover", function(d) {

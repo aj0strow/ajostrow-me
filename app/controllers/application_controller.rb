@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   include ApplicationHelper
+  helper PagesHelper
   
   before_filter :save_location
   helper_method :current_user

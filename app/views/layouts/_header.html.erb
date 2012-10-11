@@ -12,19 +12,19 @@
 		<div class="container">
 			<ul>
 				<li>
-					<%= link_to 'About', root_path(anchor: 'nav') %>
+					<%= link_to 'About', root_path(anchor: 'nav'), class: active_if(action: 'about') %>
 				</li>
 				<li class="element">
-					<%= link_to 'Thoughts', thoughts_path(anchor: 'nav') %>
+					<%= link_to 'Thoughts', thoughts_path(anchor: 'nav'), class: active_if(controller: 'thoughts') %>
 				</li>
 				<li class="element">
-					<%= link_to 'Projects', projects_path(anchor: 'nav') %>
+					<%= link_to 'Projects', projects_path(anchor: 'nav'), class: active_if(controller: 'projects') %>
 				</li>
 				<li class="element">
-					<%= link_to 'Experience', experience_path(anchor: 'nav') %>
+					<%= link_to 'Experience', experience_path(anchor: 'nav'), class: active_if(action: 'experience') %>
 				</li>
 				<li class="element">
-					<%= link_to 'Contact', contact_path(anchor: 'nav') %>
+					<%= link_to 'Contact', contact_path(anchor: 'nav'), class: active_if(action: 'contact') %>
 				</li>
 			</ul>
 		</div>
