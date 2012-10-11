@@ -42,7 +42,7 @@ class ThoughtsController < ApplicationController
   def index
     @tags = Thought.tag_counts_on(:tags)
     if params[:tags]
-      @thoughts = Thought.tagged_with params[:tags], any: true
+      @thoughts = Thought.tagged_with(params[:tags], any: true).order 'updated_at DESC'
     else
       @thoughts = Thought.find :all, order: 'updated_at DESC'
     end

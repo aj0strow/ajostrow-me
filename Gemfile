@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails'
+gem 'thin'
 gem 'omniauth-facebook', '1.4.0'
 gem 'httparty'
 gem 'dynamic_form'
