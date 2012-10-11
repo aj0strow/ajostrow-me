@@ -40,7 +40,9 @@ class ThoughtsController < ApplicationController
   end
   
   def index
-    @tags = Thought.tag_counts_on(:tags)
+    @tags ||= Thought.tag_counts_on(:tags).sort{ |x, y| 
+      y.count <=> x.count 
+    }.take(200)
     if params[:tags]
       @thoughts = Thought.tagged_with(params[:tags], any: true).order 'updated_at DESC'
     else

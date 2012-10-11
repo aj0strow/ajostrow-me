@@ -1,23 +1,10 @@
 @import "framework";
 
-@mixin tag($size, $color) {
-  font-size: $size;
-  color: $color;
-  margin: 0 5px;
-}
-
-/* Tag cloud */
-.tag-huge {
-  @include tag(1.6em, #333);
-}
-.tag-large {
-  @include tag(1.4em, #444);
-}
-.tag-medium {
-  @include tag(1.2em, #555);
-}
-.tag-small {
-  @include tag(1.0em, #666);
+#tag-cloud {
+  @include box-sizing;
+  height: 200px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #ddd;
 }
 
 .thoughts {
