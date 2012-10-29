@@ -31,7 +31,6 @@ group :development, :test do
 end
 
 group :production do
-  gem 'heroku'
   gem 'pg'
   gem 'newrelic_rpm'
 end
