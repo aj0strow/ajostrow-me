@@ -9,6 +9,41 @@
 
 .thoughts {
   margin-top: 10px;
+  .pagination {
+    margin-top: 15px;
+    width: 100%;
+    text-align: center;
+    
+    .first {
+      display: block;
+      float: left;
+    }
+    .last {
+      display: block;
+      float: right;
+    }
+    .prev {
+      margin-right: 20px;
+    }
+    .next {
+      margin-left: 20px;
+    }
+    .page {
+      cursor: default;
+      margin: 12px;
+      padding: 3px;
+      a {
+        padding: 2px;
+      }
+    }
+    .gap {
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    .current {
+      color: #777;
+    }
+  }
 }
 
 .thought {

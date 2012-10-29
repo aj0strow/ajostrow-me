@@ -2,27 +2,32 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'thin'
-gem 'omniauth-facebook', '1.4.0'
+gem 'omniauth-facebook'
 gem 'httparty'
 gem 'dynamic_form'
 gem 'jquery-rails'
-gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'acts-as-taggable-on'
 gem 'friendly_id'
+gem 'kaminari'
 
 # markdown solutions
 gem 'rdiscount'
 gem 'coderay'
 
-group :development do
-  gem 'sqlite3'
-  gem 'annotate'
+group :assets do
+  gem 'sass-rails'
+  gem 'coffee-rails'
+  gem 'uglifier'
+  gem 'jquery-ui-rails'
 end
 
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-ui-rails'
+group :development do
+  gem 'annotate'  
+end
+
+group :development, :test do
+  gem 'sqlite3'
+  gem 'faker'
 end
 
 group :production do

@@ -23,6 +23,8 @@ class Thought < ActiveRecord::Base
   
   # external plugins
   
+  paginates_per 25
+  
   extend FriendlyId
   friendly_id :title, use: [:slugged, :history]
   

@@ -44,10 +44,11 @@ class ThoughtsController < ApplicationController
       y.count <=> x.count 
     }.take(200)
     if params[:tags]
-      @thoughts = Thought.tagged_with(params[:tags], any: true).order 'updated_at DESC'
+      thoughts = Thought.tagged_with(params[:tags], any: true).order('updated_at DESC')
     else
-      @thoughts = Thought.find :all, order: 'updated_at DESC'
+      thoughts = Thought.order('updated_at DESC')
     end
+    @thoughts = thoughts.page(params[:page])
   end
   
   def destroy

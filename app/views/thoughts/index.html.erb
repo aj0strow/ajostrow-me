@@ -6,7 +6,11 @@
 
 <div class="thoughts">
 	<%= render @thoughts %>
+	
+	<%= paginate @thoughts, params: { anchor: 'nav' } %>
 </div>
+
+
 
 <% content_for :head do %>
 	<%= javascript_include_tag "d3" %>
@@ -16,10 +20,10 @@
 		$(document).ready(function() {
 			var width = parseInt( d3.select("#tag-cloud").style("width") );
 			var height = parseInt( d3.select("#tag-cloud").style("height") );
-				
+								
 			var tags = <%= @tags.to_json.html_safe %>;
 			
-			var fontSize = d3.scale.log().range([20, 60]);
+			var fontSize = d3.scale.log().range([18, 50]);
 			fontSize.domain([tags[tags.length-1].count, tags[0].count]);
 			
 			var fillColor = function() {
