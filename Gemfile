@@ -7,7 +7,7 @@ gem 'httparty'
 gem 'dynamic_form'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on'
-gem 'friendly_id'
+gem 'friendly_id', '4.0.9'
 gem 'kaminari'
 
 # markdown solutions
