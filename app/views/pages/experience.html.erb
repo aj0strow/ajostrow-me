@@ -1,88 +1,29 @@
-<div class="row experience-section">
-	<div class="content">
-		<div>
-			<p>
-				Just starting my real <a href="http://www.mcgill.ca/ece/" target="_blank">computer engineering</a>
-				coursework. Much to come&hellip;
-			</p>
-		</div>
-	</div>
-	<div class="image">
-		<%= image_tag 'experience/mcgill.png' %> 
-		<span>McGill University</span>
-	</div>
-</div>
+<%= experience_section image: 'mcgill.png', caption: 'McGill University' do %>
+	<p>Undirected and directed graph theory, shortest path, maximum flow, clusters, spanning sets.</p>
+	<p>Parsing a subset of Standard ML in Standard ML, proofs by induction, higher order functions.</p>
+	<p>Basic MIPS Assembly and C, circuit diagrams of switches, and data flow of basic architectures.</p>
+	<p>Greedy algorithms, dynamic programming, bezier curves in Java.</p>
+<% end %>
 
-<div class="row experience-section">
-	<div class="image">
-		<%= image_tag 'experience/adp.png' %> 
-		<span>Automatic Data Processing</span>
-	</div>
-	<div class="content">
-		<div>
-			<p>
-				Script-generated ant tests and detective work on the database schema when they failed.
-			</p>
-			<p>
-				Web-scraping with selenium webdriver Python bindings.
-			</p>
-			<p>
-				Audio file conversion and inspection with the Java Speech API.
-			</p>
-			<p>
-				Data-driven visualizations written in CoffeeScript in a Node/Express framework with
-				processing.js and raphael.js. 
-			</p>
-			<p>
-				Updated Informatica workflows to pass tests; rewrote a lot of SQL overrides. 
-			</p>
-			<p>
-				Parsed web logs with UNIX power tools to check page load times for IE6/IE7 records. 
-			</p>
-		</div>
-	</div>
-</div>
+<%= experience_section image: 'adp.png', caption: 'Automatic Data Processing' do %>
+	<p>Script-generated ant tests and detective work on the database schema if they failed.</p>
+	<p>Web-scraping with selenium webdriver Python bindings.</p>
+	<p>Audio file conversion and inspection with the Java Speech API.</p>
+	<p>Data-driven visualizations written in CoffeeScript in a Node/Express framework with 
+			processing.js and raphael.js.</p>
+	<p>Updated Informatica workflows to pass tests; rewrote a lot of SQL overrides.</p>
+	<p>Parsed web logs with UNIX power tools to check page load times for IE6/IE7 records.</p>
+<% end %>
 
-<div class="row experience-section">
-	<div class="content">
-		<div>
-			<p>
-				Self study time learning Android development and made a subpar Tabata Timer.
-			</p>
-			<p>
-				AP Computer Science ++ course taught by Ms. Martin starting with 
-				<a href="http://www.scheme.com/tspl4/" target="_blank">Scheme</a> and then loosely following the
-				<a href="http://www.buildingjavaprograms.com/" target="_blank">Building Java Programs</a> book, 
-				aka the <acronym title="University of Washington">UW</acronym> curriculum. 
-			</p>
-			<p>
-				First computer science class ever in Python.
-			</p>
-		</div>
-	</div>
-	<div class="image">
-		<%= image_tag 'experience/garfield.png' %>
-		<span>Garfield High School</span>
-	</div>
-</div>
+<%= experience_section image: 'garfield.png', caption: 'Garfield High School' do %>
+	<p>Self study time learning Android development and made a minimal Tabata Timer.</p>
+	<p>AP Computer Science ++ loosely following the <a href="http://www.buildingjavaprograms.com/" target="_blank">Building Java Programs</a> book, aka the <acronym title="University of Washington">UW</acronym> curriculum.</p>
+	<p>Introduction to test-driven development in <a href="http://www.scheme.com/tspl4/" target="_blank">Scheme</a>.</p>
+	<p>First computer science class ever in Python.</p>
+<% end %>
 
-<div class="row experience-section">
-	<div class="image">
-		<%= image_tag 'experience/spare-time.png' %>
-		<span>Spare Time</span>
-	</div>
-	<div class="content">
-		<div>
-			<p>
-				Web development with Ruby on Rails and everything that comes with it. I'm trying to improve
-				my graphic design skills and actually driving development with unit tests. 
-			</p>
-			<p>
-				Android app development which culminated in <abbr title="On the projects page">Mastermind</abbr>.
-			</p>
-			<p>
-				Working with <em>4more</em> and <em>onYour Star</em> to get some great ideas on the web. 
-			</p>
-		</div>
-	</div>
-</div>
+<%= experience_section image: 'spare-time.png', caption: 'Spare Time' do %>
+	<p>Working with <em>4more Innovation</em> and <em>Modreal</em> to get some great ideas on the web.</p>
+	<p>Web development with a full Ruby on Rails stack.</p>
+	<p>Android app development which culminated in <abbr title="On the projects page">Mastermind</abbr>.</p>
+<% end %>
