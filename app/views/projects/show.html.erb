@@ -1,3 +1,5 @@
+<% provide :title, @project.name %>
+
 <% if admin? %>
 	<%= link_to 'Edit', edit_project_path(@project), class: 'pull-right'  %>
 	<br>
