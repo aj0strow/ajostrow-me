@@ -2,26 +2,22 @@ ENV["RAILS_ENV"] = "test"
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 
+OmniAuth.config.test_mode = true
+
 class ActiveSupport::TestCase
-  # Setup all fixtures in test/fixtures/*.(yml|csv) for all tests in alphabetical order.
-  #
-  # Note: You'll currently still have to declare fixtures explicitly in integration tests
-  # -- they do not yet inherit this setting
   fixtures :all
+end
 
-  # Add more helper methods to be used by all tests here...
-  
+class ActionDispatch::IntegrationTest
   def login_with_facebook
-    get '/auth/facebook'
+    auth_hash = {
+      'uid' => 'pjpa983fjpa9283fjpaow38f',
+      'provider' => 'facebook',
+      'info' => {
+        'name' => 'Test User',
+        'email' => 'testuser@test.com'
+      }
+    }
+    get '/auth/facebook/callback', {}, { 'omniath.auth' => auth_hash }
   end
-  
-  OmniAuth.config.test_mode = true
-  OmniAuth.config.mock_auth[:facebook] = {
-    'user_info' => { 'name' => 'Mario Brothers', 'image' => '', 'email' => 'dpsk@email.ru' },
-    'uid' => '123545',
-    'provider' => 'facebook',
-    'credentials' => {'token' => 'token'}
-  }
-
-
 end
