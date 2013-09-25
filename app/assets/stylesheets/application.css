@@ -11,6 +11,9 @@
  *= reset
  *= require jquery.ui.all
  *= require_self
- *= require_tree .
- */
+ *= require_tree ./layout
+ *= require_tree ./styles
+ *= require_tree ./pages
+*/
+ 
  

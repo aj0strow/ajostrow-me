@@ -1,4 +1,4 @@
-@import "framework";
+@import "../framework/*";
 
 .project {
   @include box-sizing;

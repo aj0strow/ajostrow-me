@@ -1,9 +1,4 @@
-/*
- * Contents ->
- * .container, .content, hr, .row, .title, nav, section.page, footer
- */
-
-@import "framework";
+@import "../framework/*";
 
 .title {
   width: 100%;
@@ -51,28 +46,4 @@
 .nav-active {
   border-bottom: 1px solid rgba(130,40,205, 0.1);
   text-shadow: 0 0 0.04em rgba(0,0,0,0.2);
-}
-
-.footer {
-  border-top: 1px solid #eee;
-  background-color: #f7f7f7;
-  font-size: 9pt;
-  text-align: center;
-  margin-top: 25px;
-  padding-bottom: 50px;
-  .footer-top {
-    color: #aaa;
-    margin-top: 10px;
-  }
-  .footer-bottom {
-    color: #ccc;
-    margin-left: 3px;
-  }
-}
-
-.page {
-  margin: 15px;
-  .page-inner {
-    overflow: hidden;
-  }
 }

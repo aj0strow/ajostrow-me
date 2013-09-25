@@ -1,6 +1,3 @@
-$siteWidth: 780px;
-$sitePadding: 10px;
-
 @mixin space-children($spacing) {
   margin-left: $spacing;
   &:first-of-type { 

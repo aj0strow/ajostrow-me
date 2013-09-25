@@ -1,0 +1,47 @@
+@import "../framework/*";
+
+body {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background-color: rgb(252, 252, 252);
+  font-size: 1.02em;
+  background-color: #fcfcfc;
+}
+
+div {
+  overflow: hidden;
+}
+
+.row {
+  width: 100%;
+  clear: both;
+  div {
+    float: left;
+  }
+}
+
+.container {
+  display: block;
+  margin: auto;
+  width: $siteWidth;
+  padding-left: $sitePadding 0;
+}
+
+.content {
+  padding-top: $sitePadding;
+  padding-bottom: $sitePadding;
+  display: block;
+  margin: auto;
+}
+
+.page {
+  margin: 15px;
+}
+
+.page-inner {
+  overflow: hidden;
+}
+
+.pull-right {
+  float: right;
+  text-align: left;
+}
