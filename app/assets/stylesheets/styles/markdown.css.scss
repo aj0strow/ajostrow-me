@@ -22,6 +22,9 @@
     list-style: square inside;
     padding-bottom: 15px;
   }
+  img {
+    width: 100%;
+  }
 }
 
 .CodeRay {
@@ -31,6 +34,8 @@
   background: rgba(0,0,0,0.07);
   margin-top: 10px;
   margin-bottom: 15px;
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   font-family: monospace;
 }
